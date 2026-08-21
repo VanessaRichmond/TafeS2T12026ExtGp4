@@ -46,7 +46,7 @@
 		<control:NumberButtonControl Grid.Row="2" Grid.Column="1" Value="8" x:Name="button8" />
 		<control:NumberButtonControl Grid.Row="2" Grid.Column="2" Value="9" x:Name="button9" />
 		<control:NumberButtonControl Grid.Row="3" Grid.Column="0" Value="4" x:Name="button4" />
-		<control:NumberButtonControl Grid.Row="3" Grid.Column="1" Value="5" x:Name="button5" x:FieldModifier="public" />
+		<control:NumberButtonControl Grid.Row="3" Grid.Column="1" Value="5" x:Name="button5" x:FieldModifier="public"/>
 		<control:NumberButtonControl Grid.Row="3" Grid.Column="2" Value="6" x:Name="button6" />
 		<control:NumberButtonControl Grid.Row="4" Grid.Column="0" Value="1" x:Name="button1" />
 		<control:NumberButtonControl Grid.Row="4" Grid.Column="1" Value="2" x:Name="button2" />
