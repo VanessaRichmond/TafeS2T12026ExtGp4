@@ -42,12 +42,12 @@ namespace Calculator
 			loanYearsAmount = int.Parse(yearsTextBox.Text);
 
 			monthsAmount = loanYearsAmount * 12;
-			monthlyRate = annualRate / 12 * 100;
+			monthlyRate = (annualRate / 12) / 100;
 			rateFactor = Math.Pow(1 + monthlyRate, monthsAmount);
 			monthlyRepayments = loanAmount * (monthlyRate * rateFactor) / (rateFactor - 1);
 
 			monthsTextBox.Text = monthsAmount.ToString();
-			monthlyInterestRateBox.Text = monthlyRate.ToString();
+			monthlyInterestRateBox.Text = (monthlyRate*100).ToString();
 			monthlyRepaymentTextBox.Text = monthlyRepayments.ToString();
 		}
 	}
