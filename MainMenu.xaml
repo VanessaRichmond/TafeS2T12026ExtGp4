@@ -34,7 +34,7 @@
                 FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
 
 		<Button Grid.Row="3" Content="Mortgage Calculator"
-                FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
+                FontSize="18" Height="45" Width="185" HorizontalAlignment="Center" Click="MortgageButton_Click"/>
 
 		<Button Grid.Row="4" Content="Currency Converter"
                 FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
