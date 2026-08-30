@@ -48,7 +48,7 @@ namespace Calculator
 
 			monthsTextBox.Text = monthsAmount.ToString();
 			monthlyInterestRateBox.Text = (monthlyRate*100).ToString();
-			monthlyRepaymentTextBox.Text = $"${monthlyRepayments:F2}";
+			monthlyRepaymentTextBox.Text = $"${monthlyRepayments:N2}";
 		}
 	}
 }
