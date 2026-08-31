@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Windows;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -32,25 +33,46 @@ namespace Calculator
 			Frame.Navigate(typeof(MainMenu));
 		}
 
-		private void calculateButton_Click(object sender, RoutedEventArgs e)
+		private async void calculateButton_Click(object sender, RoutedEventArgs e)
 		{
 			double loanAmount, annualRate;
 			int loanYearsAmount;
 
-			loanAmount = double.Parse(principalBorrowdTextBox.Text);
-			annualRate = double.Parse(annualInterestRateTextBox.Text);
-			loanYearsAmount = int.Parse(yearsTextBox.Text);
+			try {
 
-			loanCalculations(loanAmount, annualRate, loanYearsAmount);
+				loanAmount = double.Parse(principalBorrowdTextBox.Text);
+				annualRate = double.Parse(annualInterestRateTextBox.Text);
+				loanYearsAmount = int.Parse(yearsTextBox.Text);
 
-			//monthsAmount = loanYearsAmount * 12;
-			//monthlyRate = (annualRate / 12) / 100;
-			//rateFactor = Math.Pow(1 + monthlyRate, monthsAmount);
-			//monthlyRepayments = loanAmount * (monthlyRate * rateFactor) / (rateFactor - 1);
+				loanCalculations(loanAmount, annualRate, loanYearsAmount);
+			}
+			catch {
+				ContentDialog dialog = new ContentDialog
+				{
+					XamlRoot = this.Content.XamlRoot,
+					Title = "Error Message",
+					Content = "Please check input values. Empty fields are not allowed",
+					CloseButtonText = "OK"
+				};
+				_ = await dialog.ShowAsync();
+				if (string.IsNullOrWhiteSpace(principalBorrowdTextBox.Text))
+					{
+					principalBorrowdTextBox.Focus(FocusState.Programmatic);
+				}
+				else if (string.IsNullOrWhiteSpace(yearsTextBox.Text))
+				{
+					yearsTextBox.Focus(FocusState.Programmatic);
+				}
+				else
+				{
+					annualInterestRateTextBox.Focus(FocusState.Programmatic);
+				}
+				
+				return;
 
-			//monthsTextBox.Text = monthsAmount.ToString();
-			//monthlyInterestRateBox.Text = (monthlyRate*100).ToString();
-			//monthlyRepaymentTextBox.Text = $"${monthlyRepayments:N2}";
+			}
+
+
 		}
 
 		private void loanCalculations(double amount, double anualRate, int yearsLength) {
