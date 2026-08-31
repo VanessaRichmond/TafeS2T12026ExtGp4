@@ -34,20 +34,35 @@ namespace Calculator
 
 		private void calculateButton_Click(object sender, RoutedEventArgs e)
 		{
-			double loanAmount, annualRate, monthlyRate, monthlyRepayments, rateFactor;
-			int loanYearsAmount, monthsAmount;
+			double loanAmount, annualRate;
+			int loanYearsAmount;
 
 			loanAmount = double.Parse(principalBorrowdTextBox.Text);
 			annualRate = double.Parse(annualInterestRateTextBox.Text);
 			loanYearsAmount = int.Parse(yearsTextBox.Text);
 
-			monthsAmount = loanYearsAmount * 12;
-			monthlyRate = (annualRate / 12) / 100;
+			loanCalculations(loanAmount, annualRate, loanYearsAmount);
+
+			//monthsAmount = loanYearsAmount * 12;
+			//monthlyRate = (annualRate / 12) / 100;
+			//rateFactor = Math.Pow(1 + monthlyRate, monthsAmount);
+			//monthlyRepayments = loanAmount * (monthlyRate * rateFactor) / (rateFactor - 1);
+
+			//monthsTextBox.Text = monthsAmount.ToString();
+			//monthlyInterestRateBox.Text = (monthlyRate*100).ToString();
+			//monthlyRepaymentTextBox.Text = $"${monthlyRepayments:N2}";
+		}
+
+		private void loanCalculations(double amount, double anualRate, int yearsLength) {
+			double monthlyRate, monthlyRepayments, rateFactor;
+			int monthsAmount;
+			monthsAmount = yearsLength * 12;
+			monthlyRate = (anualRate / 12) / 100;
 			rateFactor = Math.Pow(1 + monthlyRate, monthsAmount);
-			monthlyRepayments = loanAmount * (monthlyRate * rateFactor) / (rateFactor - 1);
+			monthlyRepayments = amount * (monthlyRate * rateFactor) / (rateFactor - 1);
 
 			monthsTextBox.Text = monthsAmount.ToString();
-			monthlyInterestRateBox.Text = (monthlyRate*100).ToString();
+			monthlyInterestRateBox.Text = (monthlyRate * 100).ToString();
 			monthlyRepaymentTextBox.Text = $"${monthlyRepayments:N2}";
 		}
 	}
