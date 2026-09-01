@@ -44,7 +44,7 @@ namespace Calculator
 
 		private void MortgageCalculator_Click(object sender, RoutedEventArgs e)
 		{
-			Frame.Navigate(typeof(MortgageCalculator));
+			//Frame.Navigate(typeof(MortgageCalculator));
 		}
 
 		private void Exit_Click(object sender, RoutedEventArgs e)
