@@ -33,14 +33,16 @@
 		<Button Grid.Row="2" Content="Maths Calculator" Click="MathCalculator_Click"
                 FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
 
-		<Button Grid.Row="3" Content="Mortgage Calculator" Click="MortgageCalculator_Click" 
-                FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
 
+<Button Grid.Row="3" Content="Mortgage Calculator" Click="MortgageCalculator_Click"
+    FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
 		<Button Grid.Row="4" Content="Currency Converter" Click="CurrencyConverter_Click"
                 FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
 
+
 		<Button Grid.Row="5" Content="Units Converter" Click="UnitsConverter_Click" 
 				FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
+
 
 		<Button Grid.Row="6" Content="Exit" Click="Exit_Click"
                 FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
