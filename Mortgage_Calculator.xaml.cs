@@ -83,9 +83,9 @@ namespace Calculator
 			rateFactor = Math.Pow(1 + monthlyRate, monthsAmount);
 			monthlyRepayments = amount * (monthlyRate * rateFactor) / (rateFactor - 1);
 
-			monthsTextBox.Text = monthsAmount.ToString();
-			monthlyInterestRateBox.Text = $"{monthlyRate * 100:N2}";
-			monthlyRepaymentTextBox.Text = $"${monthlyRepayments:N2}";
+			monthsTextBox.Text = $"Months: {monthsAmount}";
+			monthlyInterestRateBox.Text = $"Monthly Interest Rate: {monthlyRate * 100:N2} %";
+			monthlyRepaymentTextBox.Text = $"Monthly Repayment: $ {monthlyRepayments:N2}";
 		}
 	}
 }

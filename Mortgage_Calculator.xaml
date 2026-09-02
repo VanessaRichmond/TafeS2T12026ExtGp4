@@ -10,14 +10,15 @@
 
     <Grid Width="700">
 		<StackPanel Margin="24" Spacing="12">
-			<TextBlock Text="Mortgage Calculator" FontSize="35" FontWeight="Bold"/>
+			<TextBlock x:Name="mortgageCalculatorTextBlock" Text="Mortgage Calculator" FontSize="35" FontWeight="Bold"/>
 			<TextBox x:Name="principalBorrowdTextBox" Header="Principal Borrowed ($)" PlaceholderText="Input Amount to borrow" FontSize="24"/>
 			<TextBox x:Name="yearsTextBox" Header="Years:" PlaceholderText="Input loan duration" FontSize="24"/>
 			<TextBox x:Name="annualInterestRateTextBox" Header="Annual Interest Rate: %" PlaceholderText="Input annual interest rate" FontSize="24"/>
-			<TextBlock Text="Loan Terms" FontSize="25" FontWeight="Bold"/>
-			<TextBox x:Name="monthsTextBox" Header="Months:" FontSize="24" IsEnabled="False"/>
-			<TextBox x:Name="monthlyInterestRateBox" Header="Monthly Interest Rate: %" FontSize="24" IsEnabled="False"/>
-			<TextBox x:Name="monthlyRepaymentTextBox" Header="Monthly Repayment: $" FontSize="24" IsEnabled="False"/>
+			<TextBlock x:Name="loanTermsTextBlock" Text="Loan Terms" FontSize="25" FontWeight="Bold"/>
+			<TextBlock x:Name="monthsTextBox" Text="Months:" FontSize="25" FontStyle="Italic"/>
+			<TextBlock x:Name="monthlyInterestRateBox" Text="Monthly Interest Rate:" FontSize="25" FontStyle="Italic"/>
+			<TextBlock x:Name="monthlyRepaymentTextBox" Text="Monthly Repayment:" FontSize="25" FontStyle="Italic"/>
+			<!--<TextBox x:Name="monthlyRepaymentTextBox" Header="Monthly Repayment: $" FontSize="24" IsEnabled="False"/>-->
 			<Button Content="Calculate" Margin="0,12,0,0" Click="calculateButton_Click"/>
 			<TextBlock x:Name="ResultText" FontSize="18" FontWeight="SemiBold" Margin="0,12,0,0"/>
 			<Button Content="Back to Menu" Click="MainPage_Click"/>
