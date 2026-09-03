@@ -46,7 +46,17 @@ namespace Calculator
         {
             Frame.Navigate(typeof(Mortgage_Calculator));
         }
+		private async void TripCalculator_Click(object sender, RoutedEventArgs e)
+		{
+    		ContentDialog dialog = new ContentDialog
+    	{
+       			Title = "Trip Calculator",
+        		Content = "Trip calculator C# code will be developed later.",
+        		CloseButtonText = "OK"
+    	};
 
+    		await dialog.ShowAsync();
+		}
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
