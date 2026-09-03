@@ -26,6 +26,7 @@ namespace Calculator
 		{
 			this.InitializeComponent();
 		}
+
         private void MathCalculator_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));

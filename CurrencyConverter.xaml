@@ -121,7 +121,7 @@
                     Margin="0,5"
 					Click="CalculateCurrency_Click"/>
 			
-			<Button Content="Exit"
+			<Button Content="Exit to Main Menu"
                     Width="200" Height="45"
                     Background="#A6A6A6"
                     Foreground="Black"
