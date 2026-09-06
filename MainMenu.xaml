@@ -40,7 +40,7 @@
 				FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
 		<Button Grid.Row="6" Content="Trip Calculator" Click="TripCalculator_Click"
         		FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
-		<Button Grid.Row="6" Content="Exit" Click="Exit_Click"
+		<Button Grid.Row="7" Content="Exit" Click="Exit_Click"
                 FontSize="18" Height="45" Width="185" HorizontalAlignment="Center"/>
 		
 	</Grid>
